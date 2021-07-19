@@ -24,7 +24,7 @@ if len(sys.argv) == 1:
 bigword = c.random_line(sys.argv[1])
 word = bigword.strip()
 i = 0
-val = input("Press spacebar to play")
+val = input("Press enter to play")
 j = 0
 c = 0
 y = 0
