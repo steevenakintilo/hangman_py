@@ -9,9 +9,11 @@
 import c
 import d
 from os import system, name
+from c import print_guy
 import sys
 
 system('clear')
+
 def change_letter(list, pos, char):
 
         first_ele = list.pop(pos)
@@ -40,6 +42,7 @@ print(ans)
 res = 0
 bad = 5
 while res < len(word):
+    print_guy(bad)
     val = input("Tapes une lettre ou un mot mais si le mot est faux perdue: ")
     print("Nombre d'essaies restant %d" % (bad))
     if val == word:
@@ -91,6 +94,7 @@ while res < len(word):
         print("Lettre fausse", bad_letter)
         bad = bad - 1
     if bad < 0:
+        print_guy(-10)
         print("Tu as perdus")
         print("Le mot était %s" % (bigword))
         break

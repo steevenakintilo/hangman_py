@@ -8,6 +8,7 @@
 
 import c
 import d
+from c import print_guy
 from os import system, name
 import sys
 
@@ -40,6 +41,7 @@ print(ans)
 res = 0
 bad = 5
 while res < len(word):
+    print_guy(bad)
     val = input("Type a letter or a word but if the word is wrong you lost: ")
     print("Number of trials remaining %d" % (bad))
     if val == word:
@@ -91,6 +93,7 @@ while res < len(word):
         print("Wrong letter", bad_letter)
         bad = bad - 1
     if bad < 0:
+        print_guy(-10)
         print("You lost")
         print("The word was %s" % (bigword))
         break
